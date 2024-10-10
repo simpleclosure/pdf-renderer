@@ -1,0 +1,10 @@
+lib
+node_modules
+*.log
+dist
+coverage
+.jshintrc
+.idea
+.DS_Store
+.cache
+.parcel-cache
