@@ -1,5 +1,5 @@
 {
-  "name": "@simpleclosure/pdf-renderer",
+  "name": "pdf-renderer",
   "version": "1.0.0",
   "license": "MIT",
   "description": "Create PDF files on the browser and server",
@@ -12,8 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/simpleclosure/react-pdf.git",
-    "directory": "packages/renderer"
+    "url": "https://github.com/simpleclosure/react-pdf.git"
   },
   "scripts": {
     "build": "rimraf ./lib && rollup -c",
@@ -25,10 +24,10 @@
   "dependencies": {
     "@babel/runtime": "^7.20.13",
     "@react-pdf/font": "^3.0.0",
-    "@react-pdf/layout": "^4.0.0",
+    "@react-pdf/layout": "github:simpleclosure/pdf-layout",
     "@react-pdf/pdfkit": "^4.0.0",
     "@react-pdf/primitives": "^4.0.0",
-    "@react-pdf/render": "^4.0.0",
+    "@react-pdf/render": "github:simpleclosure/pdf-render",
     "@react-pdf/types": "^2.7.0",
     "events": "^3.3.0",
     "object-assign": "^4.1.1",
@@ -49,11 +48,6 @@
     "lib",
     "index.d.ts"
   ],
-  "collective": {
-    "type": "opencollective",
-    "url": "https://opencollective.com/react-pdf",
-    "logo": "https://opencollective.com/opencollective/logo.txt"
-  },
   "devDependencies": {
     "@babel/core": "^7.20.7",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
