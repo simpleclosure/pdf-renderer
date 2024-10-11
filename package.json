@@ -1,6 +1,6 @@
 {
   "name": "pdf-renderer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "Create PDF files on the browser and server",
   "author": "Nimrod Ram <nimrod@simpleclosure.com>",
