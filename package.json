@@ -22,7 +22,7 @@
     "test": "vitest && vitest --config vitest.browser.config.js"
   },
   "dependencies": {
-    "@babel/runtime": "^7.20.13",
+    "@babel/runtime": "^7.26.10",
     "@react-pdf/font": "^3.0.0",
     "@react-pdf/layout": "github:simpleclosure/pdf-layout",
     "@react-pdf/pdfkit": "^4.0.0",
