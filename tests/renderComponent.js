@@ -1,9 +1,9 @@
 /* eslint-disable no-param-reassign */
 
-import Canvas from 'canvas';
-import pdfjs from 'pdfjs-dist/legacy/build/pdf';
+import { createCanvas } from 'canvas';
+import * as pdfjs from 'pdfjs-dist/legacy/build/pdf.mjs';
 
-import { renderToBuffer } from '../';
+import { renderToBuffer } from '..';
 
 /**
  * copy-pasted code from
@@ -11,7 +11,7 @@ import { renderToBuffer } from '../';
  */
 const NodeCanvasFactory = {
   create(width, height) {
-    const canvas = Canvas.createCanvas(width, height);
+    const canvas = createCanvas(width, height);
     const context = canvas.getContext('2d');
     return {
       canvas,
@@ -62,7 +62,7 @@ const composeCanvases = (canvases) => {
     [0, 0],
   );
 
-  const resultCanvas = Canvas.createCanvas(
+  const resultCanvas = createCanvas(
     maxWidth,
     maxHeight * canvases.length + GAP * (canvases.length - 1),
   );
@@ -95,7 +95,7 @@ const renderComponent = async (element) => {
   const source = await renderToBuffer(element);
 
   const document = await pdfjs.getDocument({
-    data: source,
+    data: new Uint8Array(source),
     verbosity: 0,
   }).promise;
 
