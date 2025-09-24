@@ -99,5 +99,8 @@
     "util": "^0.12.4",
     "vitest": "^3.2.4",
     "vitest-fetch-mock": "^0.4.5"
+  },
+  "resolutions": {
+    "puppeteer-core/ws": "8.17.1"
   }
 }
